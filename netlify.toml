@@ -7,6 +7,9 @@
   to = "https://arhaanb.co/arhaan2.jpg"
 
 
+
+
 [[redirects]]
-  from = "/google"
-  to = "https://google.com"
+  from = "/*"
+  to = "index.html"
+	status = 200
