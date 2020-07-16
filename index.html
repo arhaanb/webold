@@ -4,15 +4,109 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 	<title>Hi</title>
 </head>
 
 <style>
-	
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: 'raleway';
+	}
+
+	.title {
+		font-weight: 500;
+		margin-bottom: 0.2em;
+	}
+
+	.arhaan {
+		width: 100%;
+		margin: 2em 0;
+		border-radius: 1em;
+	}
+
+	footer {
+		margin-top: 1em;
+		padding: 1em 0;
+	}
+
+	a:hover {
+		color: #121314;
+	}
+
+	a {
+		text-decoration: none;
+		color: #121314;
+		position: relative;
+	}
+
+	.socials .link {
+		margin-right: 1em;
+		margin-top: 0;
+	}
+
+	.link:hover {
+		color: #121314;
+	}
+
+	.link:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 60%;
+		left: -0.1em;
+		right: -0.1em;
+		bottom: 0;
+		transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+		background-color: #4ac5f152;
+	}
+
+	.link:hover:after {
+		top: 0%;
+	}
+
+	::-moz-selection {
+		/* Code for Firefox */
+		color: #222;
+		background: #4ac5f152;
+	}
+
+	::selection {
+		color: #222;
+		background: #4ac5f152;
+	}
 </style>
 
 <body>
-	<h1>Hlo frnds</h1>
+
+	<div class="container">
+
+		<div class="two columns">
+			<img src="./arhaan.jpg" alt="Arhaan" class="arhaan">
+		</div>
+		<div class="u-cf"></div>
+		<h3 class="title">Hi, I'm Arhaan Bahadur</h3>
+		<p>This website is under construction. Check back soon!</p>
+
+		<footer>
+			<div class="flex">
+				<div class="socials">
+					<a href="//github.com/arhaanb" class="link" target="_blank">GitHub</a>
+					<a href="//instagram.com/arhaan_bahadur" class="link" target="_blank">Instagram</a>
+					<a href="//twitter.com/arhaan_bahadur" class="link" target="_blank">Twitter</a>
+					<a href="//open.spotify.com/user/arhaanb" class="link" target="_blank">Spotify</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+
 </body>
 
 </html>
