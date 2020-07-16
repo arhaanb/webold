@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/hotpic"
+  to = "https://arhaanb.co/arhaan.png"
+
+[[redirects]]
+  from = "/hotpic2"
+  to = "https://arhaanb.co/arhaan2.jpg"
+
+
+
+
+[[redirects]]
+  from = "/*"
+  to = "index.html"
+	status = 200
