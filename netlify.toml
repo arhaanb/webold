@@ -6,6 +6,10 @@
   from = "/hotpic2"
   to = "https://arhaanb.co/arhaanb2.jpg"
 
+[[redirects]]
+  from = "/discord"
+  to = "https://discord.gg/vBmuT6E"
+
 
 
 
