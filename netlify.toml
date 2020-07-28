@@ -10,6 +10,10 @@
   from = "/discord"
   to = "https://discord.gg/vBmuT6E"
 
+[[redirects]]
+  from = "/terrano"
+  to = "https://gh.arhaanb.co/terrano"
+
 
 
 
