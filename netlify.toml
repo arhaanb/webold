@@ -13,6 +13,10 @@
 [[redirects]]
   from = "/terrano"
   to = "https://gh.arhaanb.co/terrano"
+  
+[[redirects]]
+  from = "/GPL"
+  to = "https://gpl.arhaanb.co"
 
 
 
