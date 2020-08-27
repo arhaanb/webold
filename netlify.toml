@@ -25,6 +25,10 @@
 [[redirects]]
   from = "/byte"
   to = "https://minetbyte.netlify.app"
+  
+[[redirects]]
+  from = "/:something"
+  to = "https://play.cryptx.co/:something"
 
 
 [[redirects]]
