@@ -31,6 +31,10 @@
   to = "https://elire.arhaanb.co"
 
 [[redirects]]
+  from = "/core"
+  to = "https://elire.arhaanb.co"
+
+[[redirects]]
   from = "/*"
   to = "index.html"
 	status = 200
