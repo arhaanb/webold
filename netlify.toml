@@ -27,6 +27,10 @@
   to = "https://minetbyte.netlify.app"
 
 [[redirects]]
+  from = "/elire"
+  to = "https://elire.arhaanb.co"
+
+[[redirects]]
   from = "/*"
   to = "index.html"
 	status = 200
