@@ -33,6 +33,14 @@
 [[redirects]]
   from = "/core"
   to = "https://elire.arhaanb.co"
+  
+[[redirects]]
+  from = "/medica"
+  to = "https://medica.arhaanb.co"
+  
+[[redirects]]
+  from = "/medica/app"
+  to = "https://medica-app.arhaanb.co"
 
 [[redirects]]
   from = "/*"
