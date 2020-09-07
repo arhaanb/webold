@@ -43,8 +43,8 @@
   to = "https://medica-app.arhaanb.co"
   
 [[redirects]]
-  from = "/testy/*"
-  to = "https://minet.co/:hwas"
+  from = "/testy/"
+  to = "https://minet.co/"
   status = 200
   force = true
 
