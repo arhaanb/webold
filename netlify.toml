@@ -44,8 +44,9 @@
   
 [[redirects]]
   from = "/testy"
-  to = "https://medica.arhaanb.co"
-  status="301"
+  to = "https://minet.co"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
