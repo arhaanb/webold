@@ -41,8 +41,13 @@
 [[redirects]]
   from = "/medica/app"
   to = "https://medica-app.arhaanb.co"
+  
+[[redirects]]
+  from = "/testy"
+  to = "https://medica.arhaanb.co"
+  status="301"
 
 [[redirects]]
   from = "/*"
   to = "index.html"
-	status = 200
+  status = 200
