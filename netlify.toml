@@ -23,6 +23,10 @@
   to = "https://gpl.arhaanb.co"
   
 [[redirects]]
+  from = "/safar"
+  to = "https://safar.arhaanb.co"
+  
+[[redirects]]
   from = "/byte"
   to = "https://minetbyte.netlify.app"
 
