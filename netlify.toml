@@ -9,6 +9,10 @@
 [[redirects]]
   from = "/discord"
   to = "https://discord.gg/vBmuT6E"
+  
+[[redirects]]
+  from = "/arhaanbot"
+  to = "https://discord.com/oauth2/authorize?client_id=751846270498373725&scope=bot"
 
 [[redirects]]
   from = "/terrano"
