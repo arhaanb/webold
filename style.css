@@ -150,23 +150,17 @@ img, footer {
 	transition: 0.5s;
 }
 
+.dark-mode .link:hover {
+	transition: 0.5s;
+	color: #fff;
+}
+
 .dark-mode a {
 	color: #fff;
 }
 
 .dark-mode a:hover {
 	color: #fff;
-}
-
-.dark-mode::-moz-selection {
-	/* Code for Firefox */
-	color: #fff;
-	background: #f1414152;
-}
-
-.dark-mode::selection {
-	color: #fff;
-	background: #f1414152;
 }
 
 .no {
