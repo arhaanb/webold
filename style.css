@@ -1,0 +1,172 @@
+@font-face {
+	font-family: "europa";
+	src: url("./fonts/bold.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "europa-regular";
+	src: url("./fonts/regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'europa-regular', 'segoe ui', 'sans-serif';
+	background-color: #eaeaea;
+	transition: 0.5s;
+}
+
+.title {
+	margin-top: 0.5em;
+	font-family: 'europa', Tahoma, Geneva, Verdana, sans-serif;
+	margin-bottom: 0;
+}
+
+.img {
+	width: 100%;
+}
+
+.arhaan {
+	border-radius: 0.5em;
+	width: 50%;
+}
+
+a:hover {
+	color: #222;
+}
+
+a {
+	text-decoration: none;
+	position: relative;
+	color: #222;
+}
+
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.socials a {
+	margin-right: 1em;
+	margin-top: 0;
+}
+
+.link:hover {
+	color: #121314;
+}
+
+.link:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 60%;
+	left: -0.1em;
+	right: -0.1em;
+	bottom: 0;
+	transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+	background-color: #f1414152;
+}
+
+.link:hover:after {
+	top: 0%;
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	background: #f1414152;
+}
+
+::selection {
+	background: #f1414152;
+}
+
+img, footer {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.flex-con {
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.med {
+	font-family: 'europa';
+}
+
+.yoz {
+	text-align: center;
+}
+
+@media (max-width: 550px) {
+	.flex-con {
+		height: 90vh;
+		margin: auto 0;
+	}
+}
+
+@media (max-height: 530px) {
+	.flex-con {
+		height: auto;
+		margin: 3em 0;
+	}
+}
+
+#moon {
+	width: 1.1em;
+	margin-bottom: -0.3em;
+}
+
+.dark-mode {
+	background-color: rgb(17, 17, 17);
+	color: #eaeaea;
+	transition: 0.5s;
+}
+
+.dark-mode a {
+	color: #fff;
+}
+
+.dark-mode a:hover {
+	color: #fff;
+}
+
+.dark-mode::-moz-selection {
+	/* Code for Firefox */
+	color: #fff;
+	background: #f1414152;
+}
+
+.dark-mode::selection {
+	color: #fff;
+	background: #f1414152;
+}
+
+.no {
+	display: none;
+}
+
+.darkbtn {
+	margin-bottom: -0.3em;
+	cursor: pointer;
+}

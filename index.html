@@ -4,14 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+		integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="./style.css">
 	<title>Arhaan Bahadur</title>
 	<meta name="author" content="Arhaan Bahadur" />
 	<meta name="description" content="Arhaan Bahadur is a 17 year old designer and developer." />
 	<meta name="keywords" content="Arhaan Bahadur MINET MIS" />
-	<meta name="theme-color" content="#4ac5f1" />
-	<link rel="icon" href="duotone.png" type="image/png" sizes="16x16">
+	<meta name="theme-color" content="#f14141" />
+	<link rel="icon" href="./img/duotone-min.png" type="image/png" sizes="16x16">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154909361-1"></script>
 	<script>
@@ -24,177 +26,13 @@
 
 </head>
 
-<style>
-	* {
-		margin: 0;
-		padding: 0;
-	}
-
-	body {
-		font-family: 'europa-regular';
-		background-color: #eaeaea;
-		transition: 0.5s;
-	}
-
-	.title {
-		margin-top: 0.5em;
-		font-family: 'europa', Tahoma, Geneva, Verdana, sans-serif;
-		margin-bottom: 0;
-	}
-
-	.img {
-		width: 100%;
-	}
-
-	.arhaan {
-		border-radius: 0.5em;
-		width: 50%;
-	}
-
-	a:hover {
-		color: #222;
-	}
-
-	a {
-		text-decoration: none;
-		position: relative;
-		color: #222;
-	}
-
-	.socials {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.socials a {
-		margin-right: 1em;
-		margin-top: 0;
-	}
-
-	.link:hover {
-		color: #121314;
-	}
-
-	.link:after {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		top: 60%;
-		left: -0.1em;
-		right: -0.1em;
-		bottom: 0;
-		transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-		background-color: #f1414152;
-	}
-
-	.link:hover:after {
-		top: 0%;
-	}
-
-	body::-moz-selection {
-		/* Code for Firefox */
-		color: rgb(143, 12, 12);
-		background: #f1414152;
-	}
-
-	body::selection {
-		color: rgb(134, 0, 0);
-		background: #f1414152;
-	}
-
-	img,
-	footer {
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-
-	.flex-con {
-		height: 95vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.center {
-		text-align: center;
-	}
-
-	.med {
-		font-family: 'europa';
-	}
-
-	.yoz {
-		text-align: center;
-	}
-
-	@media (max-width: 550px) {
-		.flex-con {
-			height: 100vh;
-			margin: auto 0;
-		}
-	}
-
-	@media (max-height: 530px) {
-		.flex-con {
-			height: auto;
-			margin: 3em 0;
-		}
-	}
-
-	#moon {
-		width: 1.1em;
-		margin-bottom: -0.3em;
-	}
-
-	.dark-mode {
-		background-color: rgb(17, 17, 17);
-		color: #eaeaea;
-		transition: 0.5s;
-	}
-
-	.dark-mode a {
-		color: #fff;
-	}
-
-	.dark-mode a:hover {
-		color: #fff;
-	}
-
-	.dark-mode::-moz-selection {
-		/* Code for Firefox */
-		color: #fff;
-		background: #f1414152;
-	}
-
-	.dark-mode::selection {
-		color: #fff;
-		background: #f1414152;
-	}
-
-	.no {
-		display: none;
-	}
-
-	.darkbtn {
-		margin-bottom: -0.3em;
-		cursor: pointer;
-	}
-</style>
-
 <body>
 
 	<div class="container">
 		<div class="flex-con">
 			<div class="seven columns">
 				<p class="yoz">
-					<img src="./duotone.png" alt="Arhaan" class="arhaan" draggable="false">
+					<img src="./img/duotone-min.png" loading="lazy" alt="Arhaan" class="arhaan" draggable="false">
 				</p>
 				<h1 class="title">Arhaan Bahadur</h1>
 				<p>
