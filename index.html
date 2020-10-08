@@ -32,6 +32,8 @@
 
 	body {
 		font-family: 'europa-regular';
+		background-color: #eaeaea;
+		transition: 0.5s;
 	}
 
 	.title {
@@ -50,21 +52,23 @@
 	}
 
 	a:hover {
-		color: #121314;
+		color: #222;
 	}
 
 	a {
 		text-decoration: none;
-		color: #121314;
 		position: relative;
+		color: #222;
 	}
 
 	.socials {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.socials .link {
+	.socials a {
 		margin-right: 1em;
 		margin-top: 0;
 	}
@@ -89,13 +93,13 @@
 		top: 0%;
 	}
 
-	::-moz-selection {
+	body::-moz-selection {
 		/* Code for Firefox */
 		color: rgb(143, 12, 12);
 		background: #f1414152;
 	}
 
-	::selection {
+	body::selection {
 		color: rgb(134, 0, 0);
 		background: #f1414152;
 	}
@@ -143,6 +147,45 @@
 			margin: 3em 0;
 		}
 	}
+
+	#moon {
+		width: 1.1em;
+		margin-bottom: -0.3em;
+	}
+
+	.dark-mode {
+		background-color: rgb(17, 17, 17);
+		color: #eaeaea;
+		transition: 0.5s;
+	}
+
+	.dark-mode a {
+		color: #fff;
+	}
+
+	.dark-mode a:hover {
+		color: #fff;
+	}
+
+	.dark-mode::-moz-selection {
+		/* Code for Firefox */
+		color: #fff;
+		background: #f1414152;
+	}
+
+	.dark-mode::selection {
+		color: #fff;
+		background: #f1414152;
+	}
+
+	.no {
+		display: none;
+	}
+
+	.darkbtn {
+		margin-bottom: -0.3em;
+		cursor: pointer;
+	}
 </style>
 
 <body>
@@ -165,12 +208,16 @@
 			</div>
 			<!-- <h3>Arhaan Bahadur</h3> -->
 			<footer>
-					<div class="socials">
-						<a href="//github.com/arhaanb" class="link" target="_blank">GitHub</a>
-						<a href="//instagram.com/arhaan_bahadur" class="link" target="_blank">Instagram</a>
-						<a href="//twitter.com/arhaan_bahadur" class="link" target="_blank">Twitter</a>
-						<a href="//open.spotify.com/user/arhaanb" class="link" target="_blank">Spotify</a>
-					</div>
+				<div class="socials">
+					<a onclick="darkMode()" class="darkbtn">
+						<span id="moon">🌙</span>
+						<span id="sun" class="no">🔆</span>
+					</a>
+					<a href="//github.com/arhaanb" class="link" target="_blank">GitHub</a>
+					<a href="//instagram.com/arhaan_bahadur" class="link" target="_blank">Instagram</a>
+					<a href="//twitter.com/arhaan_bahadur" class="link" target="_blank">Twitter</a>
+					<a href="//open.spotify.com/user/arhaanb" class="link" target="_blank">Spotify</a>
+				</div>
 			</footer>
 		</div>
 		<!-- <div class="u-cf"></div>
@@ -185,6 +232,16 @@
 
 	</div>
 
+	<script>
+		function darkMode() {
+			var element = document.body;
+			var sun = document.getElementById('sun')
+			var moon = document.getElementById('moon')
+			element.classList.toggle("dark-mode");
+			sun.classList.toggle("no");
+			moon.classList.toggle("no");
+		}
+	</script>
 
 </body>
 
