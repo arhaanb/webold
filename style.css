@@ -177,3 +177,7 @@ img, footer {
 	margin-bottom: -0.3em;
 	cursor: pointer;
 }
+
+.info p {
+	opacity: 0.8;
+}
