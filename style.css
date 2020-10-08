@@ -42,7 +42,6 @@ a {
 	text-decoration: none;
 	position: relative;
 	color: #222;
-	transition: 0.5s;
 }
 
 a:hover {
@@ -59,6 +58,10 @@ a:hover {
 .socials a {
 	margin-right: 1em;
 	margin-top: 0;
+}
+
+.link {
+	transition: 0.5s;
 }
 
 .link:hover {
