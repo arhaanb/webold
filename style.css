@@ -24,7 +24,6 @@ body {
 }
 
 .title {
-	margin-top: 0.5em;
 	font-family: 'europa', Tahoma, Geneva, Verdana, sans-serif;
 	margin-bottom: 0;
 }
@@ -34,17 +33,19 @@ body {
 }
 
 .arhaan {
+	margin-bottom: 0.2em;
 	border-radius: 0.5em;
-	width: 50%;
-}
-
-a:hover {
-	color: #222;
+	width: 35%;
 }
 
 a {
 	text-decoration: none;
 	position: relative;
+	color: #222;
+	transition: 0.5s;
+}
+
+a:hover {
 	color: #222;
 }
 
@@ -122,6 +123,9 @@ img, footer {
 	.flex-con {
 		height: 90vh;
 		margin: auto 0;
+	}
+	.arhaan {
+		width: 50%;
 	}
 }
 
