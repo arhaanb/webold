@@ -127,8 +127,18 @@ img, footer {
 		height: 90vh;
 		margin: auto 0;
 	}
+}
+
+@media (max-width: 750px) {
 	.arhaan {
 		width: 50%;
+	}
+}
+
+@media (max-width: 320px) {
+	.flex-con {
+		height: 100vh;
+		margin: auto 0;
 	}
 }
 
