@@ -25,6 +25,10 @@ body {
 	transition: 0.5s;
 }
 
+.hundred {
+	height: 100vh;
+}
+
 .title {
 	font-family: 'europa', Tahoma, Geneva, Verdana, sans-serif;
 	margin-bottom: 0;
@@ -186,4 +190,22 @@ img, footer {
 
 .info p {
 	opacity: 0.8;
+}
+
+.card * {
+	margin: 0;
+}
+
+.card {
+	width: 30%;
+	border: 1px solid #222;
+	margin: 3em 0;
+	padding: 1em;
+	border-radius: 0.5em;
+	transition: 0.3s;
+}
+
+.card:hover {
+	background-color: #fff;
+	border-color: #fff;
 }
