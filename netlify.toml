@@ -51,6 +51,10 @@
   to = "https://medica-app.arhaanb.co"
   
 [[redirects]]
+  from = "/shiksha/*"
+  to = "https://shiksha.arhaanb.co/:splat"
+  
+[[redirects]]
   from = "/minet/*"
   to = "https://app.minet.co/:splat"
   status = 200
