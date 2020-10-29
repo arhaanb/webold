@@ -1,3 +1,3 @@
-# 🌴 Arhaan Bahadur
+Made with <3 by Siddhayak and🌴 Arhaan Bahadur
 
-Coming soon.
+the rest is coming soon.
