@@ -43,14 +43,6 @@
   to = "https://elire.arhaanb.co"
   
 [[redirects]]
-  from = "/medica"
-  to = "https://medica.arhaanb.co"
-  
-[[redirects]]
-  from = "/medica/app"
-  to = "https://medica-app.arhaanb.co"
-  
-[[redirects]]
   from = "/shiksha/*"
   to = "https://shiksha.arhaanb.co/:splat"
   
@@ -59,6 +51,18 @@
   to = "https://app.minet.co/:splat"
   status = 200
   force = true
+  
+[[redirects]]
+  from = "/sahyog"
+  to = "https://sahyog.arhaanb.co"
+  
+[[redirects]]
+  from = "/sahyog/apk"
+  to = "https://sahyog.arhaanb.co/sahyog.apk"
+  
+[[redirects]]
+  from = "/sahyog/app"
+  to = "https://sahyog-app.arhaanb.co"
 
 [[redirects]]
   from = "/*"
