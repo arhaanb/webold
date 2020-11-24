@@ -62,7 +62,7 @@
   
 [[redirects]]
   from = "/sahyog/app"
-  to = "https://sahyog-app.arhaanb.co"
+  to = "https://sahyog-dash.herokuapp.com"
 
 [[redirects]]
   from = "/*"
