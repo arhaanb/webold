@@ -12,8 +12,12 @@
   ],
   "redirects": [
     {
-      "source": "/gh",
-      "destination": "https://github.com/arhaanb"
+      "source": "/sahyog/app",
+      "destination": "https://sahyog-dash.herokuapp.com"
+    },
+    {
+      "source": "/sahyog/apk",
+      "destination": "https://sahyog.arhaanb.co/sahyog.apk"
     }
   ],
   "rewrites": [

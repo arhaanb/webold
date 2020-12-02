@@ -48,6 +48,7 @@ export default async (req: NowRequest, res: NowResponse) => {
 
   console.error(`[${timestamp}] ${ip} -> ${source} -> n/a`)
   // res.status(404).json({ error: 'link not found', source, timestamp });
+  res.status(404);
 }
 
 interface Link {
