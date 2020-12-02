@@ -51,12 +51,6 @@
   to = "https://shiksha.arhaanb.co/:splat"
   
 [[redirects]]
-  from = "/minet/*"
-  to = "https://app.minet.co/:splat"
-  status = 200
-  force = true
-  
-[[redirects]]
   from = "/sahyog"
   to = "https://sahyog.arhaanb.co"
   

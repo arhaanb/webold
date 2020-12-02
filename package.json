@@ -1,0 +1,18 @@
+{
+  "name": "arhaanb",
+  "description": "🌴 Arhaan Bahadur's Personal Website",
+  "version": "1.0.0",
+  "author": "Arhaan Bahadur",
+  "repository": "https://github.com/arhaanb/website",
+  "homepage": "https://arhaanb.co",
+  "bugs": "https://github.com/arhaanb/website/issues",
+  "scripts": {},
+  "dependencies": {
+    "airtable": "^0.8.1"
+  },
+  "devDependencies": {
+    "@types/airtable": "^0.5.7",
+    "@vercel/node": "^1.6.1"
+  },
+  "license": "MIT"
+}
