@@ -257,10 +257,18 @@ button.ghost:hover {
 
 .card button {
 	position: absolute;
-margin-bottom: 4em;
+	margin-bottom: 4em;
 	bottom: 0em;
 }
 
 .card p {
 	margin-bottom: 3em;
+}
+
+.mpoint {
+	margin-bottom: 0.1em;
+}
+
+.gray, .grey {
+	opacity: 0.8;
 }

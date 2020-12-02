@@ -67,8 +67,3 @@
 [[redirects]]
   from = "/sahyog/app"
   to = "https://sahyog-dash.herokuapp.com"
-
-[[redirects]]
-  from = "/*"
-  to = "index.html"
-  status = 200
