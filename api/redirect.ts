@@ -48,7 +48,8 @@ export default async (req: NowRequest, res: NowResponse) => {
 
   console.error(`[${timestamp}] ${ip} -> ${source} -> n/a`)
   // res.status(404).json({ error: 'link not found', source, timestamp });
-  res.status(404).redirect('/404');
+  res.status(200).redirect('/404')
+  // res.sendFile('views/test.html', {root: __dirname })
 }
 
 interface Link {
