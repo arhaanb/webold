@@ -1,5 +1,6 @@
 import { NowRequest, NowResponse } from '@vercel/node'
 import Airtable from 'airtable'
+import request from 'request'
 
 const CACHE_DURATION_MS = 10000
 
@@ -48,7 +49,14 @@ export default async (req: NowRequest, res: NowResponse) => {
 
   console.error(`[${timestamp}] ${ip} -> ${source} -> n/a`)
   // res.status(404).json({ error: 'link not found', source, timestamp });
-  res.status(302).('/404')
+	// res.status(302).('/404')
+	
+	
+	request.get('/404', function(err, response, body) {
+    if (!err) {
+      res.send(body);
+    }
+  });
   // res.sendFile('views/test.html', {root: __dirname })
 }
 
