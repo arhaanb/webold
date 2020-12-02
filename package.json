@@ -8,7 +8,8 @@
   "bugs": "https://github.com/arhaanb/website/issues",
   "scripts": {},
   "dependencies": {
-    "airtable": "^0.8.1"
+    "airtable": "^0.8.1",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/airtable": "^0.5.7",
