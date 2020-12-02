@@ -1,7 +1,5 @@
 import { NowRequest, NowResponse } from '@vercel/node'
 import Airtable from 'airtable'
-var express = require('express');
-var app = express();
 
 const CACHE_DURATION_MS = 10000
 
@@ -52,9 +50,6 @@ export default async (req: NowRequest, res: NowResponse) => {
   // res.status(404).json({ error: 'link not found', source, timestamp });
   res.status(302).('/404')
   // res.sendFile('views/test.html', {root: __dirname })
-	app.get('/penia', function (req, res) {
-		res.sendFile(__dirname + '../index.html');
-	});
 }
 
 interface Link {
