@@ -52,7 +52,8 @@ export default async (req: NowRequest, res: NowResponse) => {
   // res.status(302).('/404')
 
   request.get('/404', function (err: String, response: String, body: String) {
-    res.send(body)
+		console.log(body)
+		res.send(body)
   })
   // res.sendFile('views/test.html', {root: __dirname })
 }
