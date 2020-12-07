@@ -19,14 +19,12 @@
       ]
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "status": 301,
-      "headers": { "Location": "/404" }
-    }
-  ],
   "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "/404",
+      "statusCode": 301
+    },
     {
       "source": "/sahyog/app",
       "destination": "https://sahyog-dash.herokuapp.com"
