@@ -315,24 +315,23 @@ button.ghost:hover {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	/* width: 90%; */
+}
+
+.spotify a:hover {
+	color: #b83030;
 }
 
 .songinfo {
 	box-sizing: border-box;
-	width: 65%;
+	width: 62%;
 }
 
 /* Equalizer animation */
 
 #equalizer {
-	/* position: relative; */
-	/* left: 50%; */
-	/* top: 2em; */
 	width: 1.5em;
 	margin-left: 0.2em;
 	display: none;
-	/* margin-top: 0.1em; */
 }
 
 #bar1, #bar2, #bar3, #bar4 {

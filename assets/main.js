@@ -23,30 +23,32 @@ var HttpClient = function () {
 var spotifyContainer = document.getElementById('spotify-con')
 var songTitle = document.getElementById('songname')
 var album = document.getElementById('album')
-var songlink = document.getElementById('songlink')
+// var songlink = document.getElementById('songlink')
 var albumArt = document.getElementById('albumart')
 var equalizer = document.getElementById('equalizer')
 
 function getSong() {
 	var client = new HttpClient();
 	// for development (TODO: Set up `vercel dev`)
-	// client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
-	client.get('/api/spotify', function (response) {
+	client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
+	// client.get('/api/spotify', function (response) {
 		var song = JSON.parse(response);
 		//console.log(song)
 		if (song.isPlaying === true) {
 			songTitle.innerText = song.title
+			songTitle.setAttribute("href", song.songUrl)
+			songTitle.setAttribute("target", "_blank")
+			
 			album.innerText = song.artist
-			songlink.setAttribute("href", song.songUrl)
-			songlink.setAttribute("target", "_blank")
 			albumArt.setAttribute("src", song.albumImageUrl)
 			equalizer.style.display = "block";
 			spotifyContainer.style.alignItems = "center"
 		} else {
 			songTitle.innerText = 'Not Playing'
+			songTitle.setAttribute("href", "#")
+			songTitle.setAttribute("target", "_self")
+			
 			album.innerText = ''
-			songlink.setAttribute("href", "#")
-			songlink.setAttribute("target", "_self")
 			albumArt.setAttribute("src", './assets/img/default.jpg')
 			equalizer.style.display = "none";
 			spotifyContainer.style.alignItems = "flex-start"
