@@ -77,7 +77,7 @@
 							<div class="spotify">
 								<img src="./assets/img/spotify.svg" alt="" id="logo">
 								<img id="albumart" src="./assets/img/default.jpg" alt="">
-								<div class="info">
+								<div class="songinfo">
 									<a href="#" id="songlink">
 										<h5 class="med" id="songname">Not Playing</h5>
 									</a>
@@ -87,7 +87,11 @@
 						</div>
 					</div>
 				</div>
+
+
 			</div>
+
+			<div class="u-cf"></div>
 
 			<footer>
 				<div class="socials">
@@ -135,8 +139,8 @@
 		function getSong() {
 			var client = new HttpClient();
 			//for development (TODO: Set up `vercel dev`)
-			//	client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
-			client.get('/api/spotify', function (response) {
+			client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
+				//client.get('/api/spotify', function (response) {
 				var song = JSON.parse(response);
 				//console.log(song)
 				if (song.isPlaying === true) {
