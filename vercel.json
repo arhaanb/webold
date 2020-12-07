@@ -21,11 +21,6 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/404",
-      "statusCode": 301
-    },
-    {
       "source": "/sahyog/app",
       "destination": "https://sahyog-dash.herokuapp.com"
     },
