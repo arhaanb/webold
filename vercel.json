@@ -37,7 +37,8 @@
   ],
   "github": {
     "autoAlias": true,
-    "enabled": true
+    "enabled": true,
+    "silent": true
   },
   "cleanUrls": true,
   "trailingSlash": false,
