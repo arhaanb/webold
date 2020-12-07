@@ -275,7 +275,7 @@ button.ghost:hover {
 
 /* spotify stuff */
 
-.spotify {
+#spotify-con {
 	border: solid #bebebe 1px;
 	padding: 1em;
 	border-radius: 0.5em;
@@ -283,7 +283,7 @@ button.ghost:hover {
 	margin-top: 0.5em;
 	display: flex;
 	justify-content: flex-start;
-	/* align-items: center; */
+	align-items: flex-start;
 	position: relative;
 }
 
