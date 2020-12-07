@@ -19,6 +19,13 @@
       ]
     }
   ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "/404" }
+    }
+  ],
   "redirects": [
     {
       "source": "/sahyog/app",
