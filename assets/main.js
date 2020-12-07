@@ -20,10 +20,10 @@ var HttpClient = function () {
 	}
 }
 
-// Default Values
-var songVal = "Not Playing"
-var albumVal = "Spotify"
-var defAlbum = './assets/img/default-min.png'
+// // Default Values
+// var songVal = "Not Playing"
+// var albumVal = "Spotify"
+// var defAlbum = './assets/img/default-min.png'
 
 var spotifyContainer = document.getElementById('spotify-con')
 var songTitle = document.getElementById('songname')
@@ -32,17 +32,13 @@ var album = document.getElementById('album')
 var albumArt = document.getElementById('albumart')
 var equalizer = document.getElementById('equalizer')
 
-songTitle.innerText = songVal
-album.innerText = albumVal
-albumArt.setAttribute("src", defAlbum)
-
 function getSong() {
 	var client = new HttpClient();
 	// for development (TODO: Set up `vercel dev`)
 	// client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
 	client.get('/api/spotify', function (response) {
 		var song = JSON.parse(response);
-		//console.log(song)
+		console.log(song)
 		if (song.isPlaying === true) {
 			songTitle.innerText = song.title
 			songTitle.setAttribute("href", song.songUrl)
@@ -53,12 +49,12 @@ function getSong() {
 			equalizer.style.display = "block";
 			spotifyContainer.style.alignItems = "center"
 		} else {
-			songTitle.innerText = songVal
+			songTitle.innerText = 'Not Playing'
 			songTitle.setAttribute("href", "#")
 			songTitle.setAttribute("target", "_self")
 
-			album.innerText = albumVal
-			albumArt.setAttribute("src", defAlbum)
+			album.innerText = 'Spotify'
+			albumArt.setAttribute("src", './assets/img/default-min.png')
 			equalizer.style.display = "none";
 			spotifyContainer.style.alignItems = "flex-start"
 		}
