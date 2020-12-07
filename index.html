@@ -84,6 +84,23 @@
 										<h5 class="med" id="songname">Not Playing</h5>
 									</a>
 									<h5 id="album"></h5>
+									<svg id="equalizer" width="40px" height="28px" viewBox="0 0 10 7" version="1.1"
+										xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<g fill="#000000">
+											<rect id="bar1"
+												transform="translate(0.500000, 6.000000) rotate(180.000000) translate(-0.500000, -6.000000) "
+												x="0" y="5" width="0.75" height="2px"></rect>
+											<rect id="bar2"
+												transform="translate(3.500000, 4.500000) rotate(180.000000) translate(-3.500000, -4.500000) "
+												x="3" y="2" width="0.75" height="5"></rect>
+											<rect id="bar3"
+												transform="translate(6.500000, 3.500000) rotate(180.000000) translate(-6.500000, -3.500000) "
+												x="6" y="0" width="0.75" height="7"></rect>
+											<rect id="bar4"
+												transform="translate(9.500000, 5.000000) rotate(180.000000) translate(-9.500000, -5.000000) "
+												x="9" y="3" width="0.75" height="4"></rect>
+										</g>
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -137,12 +154,13 @@
 		var album = document.getElementById('album')
 		var songlink = document.getElementById('songlink')
 		var albumArt = document.getElementById('albumart')
+		var equalizer = document.getElementById('equalizer')
 
 		function getSong() {
 			var client = new HttpClient();
 			//for development (TODO: Set up `vercel dev`)
-			//client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
-			client.get('/api/spotify', function (response) {
+			client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
+				//client.get('/api/spotify', function (response) {
 				var song = JSON.parse(response);
 				//console.log(song)
 				if (song.isPlaying === true) {
@@ -151,12 +169,14 @@
 					songlink.setAttribute("href", song.songUrl)
 					songlink.setAttribute("target", "_blank")
 					albumArt.setAttribute("src", song.albumImageUrl)
+					equalizer.style.display = "block";
 				} else {
 					songTitle.innerText = 'Not Playing'
 					album.innerText = ''
 					songlink.setAttribute("href", "#")
 					songlink.setAttribute("target", "_self")
 					albumArt.setAttribute("src", './assets/img/default.jpg')
+					equalizer.style.display = "none";
 				}
 			});
 		}

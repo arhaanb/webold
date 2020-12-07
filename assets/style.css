@@ -287,8 +287,9 @@ button.ghost:hover {
 	position: relative;
 }
 
-.spotify img {
-	width: 20%;
+.spotify #albumart {
+	width: 25%;
+	height: auto;
 	margin-right: 1em;
 	border-radius: 0.5em;
 }
@@ -299,6 +300,7 @@ button.ghost:hover {
 
 #logo {
 	width: 1.2em;
+	margin-right: 1em;
 }
 
 .logolink {
@@ -319,4 +321,87 @@ button.ghost:hover {
 .songinfo {
 	box-sizing: border-box;
 	width: 65%;
+}
+
+/* Equalizer animation */
+
+#equalizer {
+	/* position: relative; */
+	/* left: 50%; */
+	/* top: 2em; */
+	width: 1.5em;
+	margin-left: 0.2em;
+	display: none;
+	/* margin-top: 0.1em; */
+}
+
+#bar1, #bar2, #bar3, #bar4 {
+	fill: #c01818;
+}
+
+#bar1 {
+	animation: bar1 1s infinite linear;
+}
+
+#bar2 {
+	animation: bar2 0.6s infinite linear;
+}
+
+#bar3 {
+	animation: bar3 0.8s infinite linear;
+}
+
+#bar4 {
+	animation: bar4 0.6s infinite linear;
+}
+
+@keyframes bar1 {
+	0% {
+		height: 2px;
+	}
+	50% {
+		height: 7px;
+	}
+	100% {
+		height: 2px;
+	}
+}
+
+@keyframes bar2 {
+	0% {
+		height: 5px;
+	}
+	40% {
+		height: 1px;
+	}
+	80% {
+		height: 7px;
+	}
+	100% {
+		height: 5px;
+	}
+}
+
+@keyframes bar3 {
+	0% {
+		height: 7px;
+	}
+	50% {
+		height: 0;
+	}
+	100% {
+		height: 7px;
+	}
+}
+
+@keyframes bar4 {
+	0% {
+		height: 2px;
+	}
+	50% {
+		height: 7px;
+	}
+	100% {
+		height: 2px;
+	}
 }
