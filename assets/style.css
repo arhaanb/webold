@@ -326,6 +326,10 @@ button.ghost:hover {
 	width: 62%;
 }
 
+.toptr {
+	font-size: 1.2em;
+}
+
 /* Equalizer animation */
 
 #equalizer {
