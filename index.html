@@ -65,9 +65,27 @@
 							School</span> and I'm the President of my school's technology and entrepreneurship club <a
 							href="//minet.co" class="link" target="_blank" rel="noreferrer">MINET</a>.
 					</p>
-					<p>
+					<!-- <p>
 						This website is <span class="med">under construction</span>. More coming soon.
-					</p>
+					</p> -->
+				</div>
+
+				<!-- Spotify Now Playing -->
+				<div class="row">
+					<div class="flex-center">
+						<div class="eight columns">
+							<div class="spotify">
+								<img src="./assets/img/spotify.svg" alt="" id="logo">
+								<img id="albumart" src="./assets/img/default.jpg" alt="">
+								<div class="info">
+									<a href="#" id="songlink">
+										<h5 class="med" id="songname">Not Playing</h5>
+									</a>
+									<h5 id="album"></h5>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -109,10 +127,39 @@
 			}
 		}
 
-		var client = new HttpClient();
-		client.get('/api/spotify', function (song) {
-			console.log(song)
-		});
+		var songTitle = document.getElementById('songname')
+		var album = document.getElementById('album')
+		var songlink = document.getElementById('songlink')
+		var albumArt = document.getElementById('albumart')
+
+		function getSong() {
+			var client = new HttpClient();
+			//for development (TODO: Set up `vercel dev`)
+			//	client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
+			client.get('/api/spotify', function (response) {
+				var song = JSON.parse(response);
+				//console.log(song)
+				if (song.isPlaying === true) {
+					songTitle.innerText = song.title
+					album.innerText = song.artist
+					songlink.setAttribute("href", song.songUrl)
+					songlink.setAttribute("target", "_blank")
+					albumArt.setAttribute("src", song.albumImageUrl)
+				} else {
+					songTitle.innerText = 'Now Playing'
+					album.innerText = ''
+					songlink.setAttribute("href", "#")
+					songlink.setAttribute("target", "_self")
+					albumArt.setAttribute("src", './assets/img/default.jpg')
+				}
+			});
+		}
+
+		setInterval(function () {
+			getSong()
+		}, 30000)
+
+		getSong()
 	</script>
 
 </body>

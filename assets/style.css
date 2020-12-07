@@ -272,3 +272,48 @@ button.ghost:hover {
 .gray, .grey {
 	opacity: 0.8;
 }
+
+/* spotify stuff */
+
+.spotify {
+	border: solid #bebebe 1px;
+	padding: 1em;
+	border-radius: 0.5em;
+	margin-bottom: 2em;
+	margin-top: 0.5em;
+	display: flex;
+	justify-content: flex-start;
+	/* align-items: center; */
+	position: relative;
+}
+
+.spotify img {
+	width: 20%;
+	margin-right: 1em;
+	border-radius: 0.5em;
+}
+
+#album {
+	opacity: 0.7;
+}
+
+#logo {
+	position: absolute;
+	top: 0.8em;
+	right: 0;
+	width: 1.2em;
+}
+
+.spotify h5 {
+	font-size: 1.1em;
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* width: 90%; */
+}
+
+.info {
+	box-sizing: border-box;
+	width: 70%;
+}
