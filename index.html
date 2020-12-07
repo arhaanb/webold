@@ -75,7 +75,9 @@
 					<div class="flex-center">
 						<div class="eight columns">
 							<div class="spotify">
-								<img src="./assets/img/spotify.svg" alt="" id="logo">
+								<a href="//open.spotify.com/user/arhaanb" class="logolink" rel="noreferrer" target="_blank">
+									<img src="./assets/img/spotify.svg" alt="" id="logo">
+								</a>
 								<img id="albumart" src="./assets/img/default.jpg" alt="">
 								<div class="songinfo">
 									<a href="#" id="songlink">
@@ -150,7 +152,7 @@
 					songlink.setAttribute("target", "_blank")
 					albumArt.setAttribute("src", song.albumImageUrl)
 				} else {
-					songTitle.innerText = 'Now Playing'
+					songTitle.innerText = 'Not Playing'
 					album.innerText = ''
 					songlink.setAttribute("href", "#")
 					songlink.setAttribute("target", "_self")
