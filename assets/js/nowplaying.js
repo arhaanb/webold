@@ -29,7 +29,7 @@ function getSong() {
 			songTitle.setAttribute("target", "_self")
 
 			album.innerText = 'Spotify'
-			albumArt.setAttribute("src", './assets/img/default-min.png')
+			albumArt.setAttribute("src", './assets/img/def_dark.png')
 			equalizer.style.display = "none";
 			spotifyContainer.style.alignItems = "flex-start"
 		}

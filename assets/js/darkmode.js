@@ -1,3 +1,4 @@
+var light = true
 function darkMode() {
 	var element = document.body;
 	var sun = document.getElementById('sun')
@@ -5,6 +6,16 @@ function darkMode() {
 	element.classList.toggle("dark-mode");
 	sun.classList.toggle("no");
 	moon.classList.toggle("no");
+	var img = document.getElementById('albumart')
+	// if (light == true) {
+	// 	console.log('penis')
+	// 	img.src = './assets/img/def_light.png'
+	// 	light = false
+	// } else {
+	// 	console.log('super penis')
+	// 	img.src = './assets/img/def_dark.png'
+	// 	light = true
+	// }
 }
 
 var HttpClient = function () {
