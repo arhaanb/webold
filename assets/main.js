@@ -34,11 +34,8 @@ var equalizer = document.getElementById('equalizer')
 
 function getSong() {
 	var client = new HttpClient();
-	// for development (TODO: Set up `vercel dev`)
-	// client.get('https://cors-anywhere.herokuapp.com/https://arhaanb.co/api/spotify', function (response) {
 	client.get('/api/spotify', function (response) {
 		var song = JSON.parse(response);
-		console.log(song)
 		if (song.isPlaying === true) {
 			songTitle.innerText = song.title
 			songTitle.setAttribute("href", song.songUrl)
