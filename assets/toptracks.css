@@ -19,8 +19,6 @@
 	border-radius: 0.5em;
 }
 
-
-
 #logo {
 	width: 1.2em;
 	margin-right: 1em;
@@ -35,15 +33,14 @@
 .spotify h5.title {
 	font-size: 1.4em;
 	margin: 0;
-	/* white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis; */
 }
+
 #album {
 	opacity: 0.7;
 	font-size: 1.2em;
 	margin: 0;
 }
+
 .spotify a:hover {
 	color: #b83030;
 }
@@ -59,4 +56,10 @@
 footer {
 	margin-bottom: 2em;
 	margin-top: 3em;
+}
+
+@media (max-width: 1200px) {
+	#spotify-con {
+		align-items: center;
+	}
 }
