@@ -8,6 +8,15 @@
           "value": "s-maxage=60, stale-while-revalidate"
         }
       ]
+    },
+    {
+      "source": "/api/spotify",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=10, stale-while-revalidate=10"
+        }
+      ]
     }
   ],
   "redirects": [
