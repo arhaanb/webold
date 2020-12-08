@@ -7,9 +7,10 @@ export default async (_, res) => {
 	const tracks = items.slice(0, 10).map((track) => ({
 		artist: track.artists.map((_artist) => _artist.name).join(', '),
 		songUrl: track.external_urls.spotify,
-		title: track.name
+		title: track.name,
+		albumArt: track.images[0].url
 	}));
 
-	// return res.status(200).json({ tracks });
-	return res.status(200).json({ items });
+	// return res.status(200).json({ items });
+	return res.status(200).json({ tracks });
 };
