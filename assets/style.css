@@ -19,6 +19,11 @@
 	padding: 0;
 }
 
+img {
+	-webkit-user-drag: none;
+	-user-drag: none;
+}
+
 body {
 	font-family: 'europa-regular', 'segoe ui', 'Arial', 'sans-serif';
 	background-color: #eaeaea;
