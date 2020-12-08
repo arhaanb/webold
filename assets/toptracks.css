@@ -1,0 +1,62 @@
+/* spotify stuff */
+
+#spotify-con {
+	border: solid #bebebe 1px;
+	padding: 1em;
+	border-radius: 0.5em;
+	margin-bottom: 2em;
+	margin-top: 0.5em;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+}
+
+.spotify #albumart {
+	width: 18%;
+	height: auto;
+	margin-right: 1em;
+	border-radius: 0.5em;
+}
+
+
+
+#logo {
+	width: 1.2em;
+	margin-right: 1em;
+}
+
+.logolink {
+	position: absolute;
+	top: 0.8em;
+	right: 0;
+}
+
+.spotify h5.title {
+	font-size: 1.4em;
+	margin: 0;
+	/* white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis; */
+}
+#album {
+	opacity: 0.7;
+	font-size: 1.2em;
+	margin: 0;
+}
+.spotify a:hover {
+	color: #b83030;
+}
+
+.toptr {
+	font-size: 1.2em;
+}
+
+#track-con {
+	margin-top: 5em;
+}
+
+footer {
+	margin-bottom: 4em;
+	margin-top: 3em;
+}

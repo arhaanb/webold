@@ -4,14 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/assets/skeleton.css">
-	<link rel="stylesheet" href="/assets/style.css">
+	<link rel="stylesheet" href="./assets/skeleton.css">
+	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/toptracks.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 	<title>Arhaan Bahadur</title>
 	<meta name="author" content="Arhaan Bahadur" />
 	<meta name="description" content="Arhaan Bahadur is a 17 year old designer and developer." />
 	<meta name="keywords" content="Arhaan Bahadur MINET MIS" />
 	<meta name="theme-color" content="#f14141" />
-	<link rel="icon" href="/assets/img/arhaanb-min.jpg" type="image/png" sizes="16x16">
+	<link rel="icon" href="./favicon.ico" type="image/png" sizes="16x16">
 
 	<!-- SEO Stuff -->
 	<meta name="description" content="Arhaan Bahadur is a 17 year old designer and developer." />
@@ -23,11 +25,11 @@
 	<meta property="og:url" content="https://arhaanb.co" />
 	<meta property="og:description" content="Arhaan Bahadur is a 17 year old designer and developer." />
 	<meta property="og:site_name" content="Arhaan Bahadur" />
-	<meta property="og:image" content="https://arhaanb.co/img/arhaanb-min.jpg" />
+	<meta property="og:image" content="https://arhaanb.co/favicon.ico" />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="512" />
 	<meta property="og:image:height" content="512" />
-	<meta name="twitter:image" content="https://arhaanb.co/img/arhaanb-min.jpg" />
+	<meta name="twitter:image" content="https://arhaanb.co/favicon.ico" />
 	<meta name="googlebot" content="noindex, nofollow">
 	<meta name="bingbot" content="noindex, nofollow">
 	<meta name="slurp" content="noindex, nofollow">
@@ -53,20 +55,54 @@
 <body>
 
 	<div class="container">
-		<div class="flex-con">
+		<div class="flex-center" id="track-con">
 			<div class="seven columns">
-				<h1 class="title mpoint">Page Not Found 🤯</h1>
+				<h1 class="title">Spotify Top Tracks</h1>
 				<div class="info">
-					<h5 class="grey" style="font-size: 1.6em; margin-bottom: 1em;">
-						You can go back <span class="med"><a href="/" class="link" rel="noreferrer">Home</a></span>.
-					</h5>
 					<p>
-						Made with 💖 by <span class="med">Arhaan Bahadur</span>
+						Some of my top tracks from last month. Check out my account <a href="/spotify" class="link">here</a>.
 					</p>
+
+					<h6>
+						<a href="/" class="link iconcon">
+							<i class='bx bxs-left-arrow' ></i>
+							<span>
+								Go Back Home
+							</span>
+						</a>
+					</h6>
+				</div>
+
+
+				<div class="row">
+					<div class="flex-center">
+						<div id="top-tracks">
+							<h5 class="center med">Loading...</h5>
+						</div>
+					</div>
 				</div>
 			</div>
+
+			<div class="u-cf"></div>
+
+			<footer>
+				<div class="socials">
+					<a onclick="darkMode()" class="darkbtn">
+						<span id="moon">🌙</span>
+						<span id="sun" class="no">🔆</span>
+					</a>
+					<a href="//github.com/arhaanb" class="link" rel="noreferrer" target="_blank">GitHub</a>
+					<a href="//instagram.com/arhaan_bahadur" rel="noreferrer" class="link" target="_blank">Instagram</a>
+					<a href="//twitter.com/arhaan_bahadur" class="link" rel="noreferrer" target="_blank">Twitter</a>
+					<a href="//open.spotify.com/user/arhaanb" class="link" rel="noreferrer" target="_blank">Spotify</a>
+				</div>
+			</footer>
 		</div>
 	</div>
+
+
+	<script src="./assets/js/darkmode.js"></script>
+	<script src="./assets/js/toptracks.js"></script>
 
 </body>
 
