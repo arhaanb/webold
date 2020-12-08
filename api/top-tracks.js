@@ -10,5 +10,6 @@ export default async (_, res) => {
 		title: track.name
 	}));
 
-	return res.status(200).json({ tracks });
+	// return res.status(200).json({ tracks });
+	return res.status(200).json({ items });
 };
