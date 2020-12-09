@@ -35,7 +35,8 @@
       "destination": "/api/redirect"
     },
     { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/gh/(.*)", "destination": "/api" }
+    { "source": "/gh/(.*)", "destination": "/api" },
+    { "source": "/poopy/(.*)", "destination": "/api" }
   ],
   "github": {
     "autoAlias": true,
