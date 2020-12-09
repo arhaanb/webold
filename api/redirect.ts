@@ -1,6 +1,8 @@
 import { NowRequest, NowResponse } from '@vercel/node'
 import Airtable from 'airtable'
 import fs from 'fs'
+const path = require('path')
+const dirPath = path.join(__dirname, '/../404.html')
 
 const CACHE_DURATION_MS = 10000
 
@@ -49,7 +51,7 @@ export default async (req: NowRequest, res: NowResponse) => {
 
   console.error(`[${timestamp}] ${ip} -> ${source} -> n/a`)
 
-  fs.readFile('404.html', 'utf8', function (err, data) {
+  fs.readFile(dirPath, 'utf8', function (err, data) {
     if (err) {
       return console.log(err)
     }

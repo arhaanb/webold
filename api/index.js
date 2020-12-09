@@ -1,8 +1,10 @@
 const app = require('express')()
 const axios = require('axios');
 fs = require('fs')
+const path = require('path')
+const dirPath = path.join(__dirname, '/../404.html')
 
-fs.readFile('404.html', 'utf8', function (err, data) {
+fs.readFile(dirPath, 'utf8', function (err, data) {
 	if (err) {
 		console.log(err);
 		return res.send('an error occured.');
