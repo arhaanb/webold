@@ -1,15 +1,6 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "cache-control",
-          "value": "s-maxage=60, stale-while-revalidate"
-        }
-      ]
-    },
-    {
       "source": "/api/spotify",
       "headers": [
         {
