@@ -139,7 +139,7 @@ img, footer, button {
 @media (max-width: 550px) {
 	.flex-con {
 		height: 90vh;
-		margin: auto 0;
+		margin: 2em 0;
 	}
 }
 
