@@ -27,6 +27,7 @@ fs.readFile(dirPath, 'utf8', function (err, data) {
 			return res.status(404).send(errorPage)
 		} catch (e) {
 			console.error(e)
+			return res.status(404).send(errorPage)
 		}
 	})
 
