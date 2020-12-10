@@ -30,6 +30,18 @@ fs.readFile(dirPath, 'utf8', function (err, data) {
 		}
 	})
 
+	//404
+	app.use((res, req, next) => {
+		next(err);
+	});
+
+	//Error Handler
+	app.use((err, req, res, next) => {
+		res.status(err.status || 500);
+		res.send(errorPage);
+	});
+
+
 
 });
 
