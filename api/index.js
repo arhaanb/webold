@@ -1,7 +1,7 @@
 const app = require('express')()
-const axios = require('axios');
 fs = require('fs')
 const path = require('path')
+const fetch = require('node-fetch')
 const dirPath = path.join(__dirname, '/../404.html')
 
 fs.readFile(dirPath, 'utf8', function (err, data) {
@@ -14,15 +14,20 @@ fs.readFile(dirPath, 'utf8', function (err, data) {
 
 
 	app.get('/gh/:repo', async (req, res) => {
-		const { repo } = req.params
+		var { repo } = req.params
+		try {
+			const { ok: repoExists } = await fetch(
+				`https://api.github.com/repos/arhaanb/${repo}`
+			)
 
-		axios.get(`https://api.github.com/repos/arhaanb/${repo}`)
-			.then(function (response) {
-				return res.redirect(`https://github.com/arhaanb/${repo}`)
-			})
-			.catch(function (err) {
-				return res.send(errorPage)
-			})
+			if (repoExists) {
+				return res.redirect(302, `https://github.com/arhaanb/${repo}`)
+			}
+
+			return res.status(404).send(errorPage)
+		} catch (e) {
+			console.error(e)
+		}
 	})
 
 
