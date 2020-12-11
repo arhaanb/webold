@@ -15,7 +15,6 @@ function getErr() {
 }
 
 const app = express()
-app.use(express.static('public'));
 
 app.get('/gh/:repo', async (req, res) => {
 	try {
