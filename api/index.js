@@ -1,49 +1,71 @@
-const app = require('express')()
+const express = require('express')
+const fetch = require('node-fetch')
+var Airtable = require('airtable');
+var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE_ID);
+
 fs = require('fs')
 const path = require('path')
-const fetch = require('node-fetch')
+const util = require('util')
 const dirPath = path.join(__dirname, '/../404.html')
 
-fs.readFile(dirPath, 'utf8', function (err, data) {
-	if (err) {
-		console.log(err);
-		return res.send('an error occured.');
-	}
+const readFile = util.promisify(fs.readFile);
 
-	var errorPage = data
+function getErr() {
+	return readFile(dirPath, 'utf8');
+}
 
+const app = express()
+app.use(express.static('public'));
 
-	app.get('/gh/:repo', async (req, res) => {
-		var { repo } = req.params
-		try {
-			const { ok: repoExists } = await fetch(
-				`https://api.github.com/repos/arhaanb/${repo}`
-			)
+app.get('/gh/:repo', async (req, res) => {
+	try {
+		const repo = req.params.repo
 
-			if (repoExists) {
-				return res.redirect(302, `https://github.com/arhaanb/${repo}`)
-			}
+		const { ok: yuh } = await fetch(
+			`https://api.github.com/repos/arhaanb/${repo}`
+		)
 
-			return res.status(404).send(errorPage)
-		} catch (e) {
-			console.error(e)
-			return res.status(404).send(errorPage)
+		if (yuh) {
+			return res.redirect(302, `https://github.com/arhaanb/${repo}`)
 		}
-	})
 
-	//404
-	app.use((res, req, next) => {
-		next(err);
+		getErr().then(data => {
+			return res.status(404).send(data)
+		})
+
+	} catch (e) {
+		console.error(e)
+	}
+})
+
+app.get('/:shrtn', async (req, res) => {
+	base('Links').select({
+		maxRecords: 1,
+		filterByFormula: `resolvedUid = "${req.params.shrtn}"`
+	}).eachPage(function page(records) {
+
+		if (records.length <= 0) {
+			getErr().then(data => {
+				return res.status(404).send(data)
+			})
+		} else {
+			var redirectUri = records[0].get('url')
+			return res.status(302).redirect(redirectUri)
+		}
+
+
+	}, function done(err) {
+		if (err) {
+			console.error(err);
+			getErr().then(data => {
+				return res.status(404).send(data)
+			})
+		}
 	});
-
-	//Error Handler
-	app.use((err, req, res, next) => {
-		res.status(err.status || 500);
-		res.send(errorPage);
-	});
+})
 
 
-
-});
-
-module.exports = app
+const port = process.env.PORT || 3000
+app.listen(port, (err) => {
+	if (err) throw err
+})

@@ -23,10 +23,6 @@
   "rewrites": [
     {
       "source": "/:uid",
-      "destination": "/api/redirect"
-    },
-    {
-      "source": "/api/(.*)",
       "destination": "/api"
     },
     {
