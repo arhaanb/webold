@@ -65,6 +65,14 @@ app.get('/:shrtn', async (req, res) => {
 	});
 })
 
+app.use(function (req, res, next) {
+
+	getErr().then(data => {
+		return res.status(404).send(data)
+	})
+
+});
+
 
 const port = process.env.PORT || 3000
 app.listen(port, (err) => {
