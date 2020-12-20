@@ -17,7 +17,7 @@ function getErr() {
 const app = express()
 
 app.get('/*', async (req, res) => {
-	const url = req.url.slice(1)
+	const url = req.url.slice(1).toLowerCase()
 	// console.log(url)
 	base('Links').select({
 		maxRecords: 1,
