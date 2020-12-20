@@ -16,6 +16,40 @@ function getErr() {
 
 const app = express()
 
+app.get('/*', async (req, res) => {
+	const url = req.url.slice(1)
+	// console.log(url)
+	base('Links').select({
+		maxRecords: 1,
+		filterByFormula: `resolvedUid = "${url}"`
+		// filterByFormula: `resolvedUid = "${req.params.shrtn}"`
+	}).eachPage(function page(records) {
+
+		// console.log(records)
+
+		if (records.length > 0) {
+			if (records[0].get('enabled') == 1) {
+				var redirectUri = records[0].get('url')
+				// return res.send(redirectUri)
+				return res.status(302).redirect(redirectUri)
+			}
+		}
+
+		getErr().then(data => {
+			return res.status(404).send(data)
+		})
+
+
+	}, function done(err) {
+		if (err) {
+			console.error(err);
+			getErr().then(data => {
+				return res.status(404).send(data)
+			})
+		}
+	});
+})
+
 app.get('/gh/:repo', async (req, res) => {
 	try {
 		const repo = req.params.repo
@@ -35,34 +69,6 @@ app.get('/gh/:repo', async (req, res) => {
 	} catch (e) {
 		console.error(e)
 	}
-})
-
-app.get('/:shrtn', async (req, res) => {
-	base('Links').select({
-		maxRecords: 1,
-		filterByFormula: `resolvedUid = "${req.params.shrtn}"`
-	}).eachPage(function page(records) {
-
-		if (records.length > 0) {
-			if (records[0].get('enabled') == 1) {
-				var redirectUri = records[0].get('url')
-				return res.status(302).redirect(redirectUri)
-			}
-		}
-
-		getErr().then(data => {
-			return res.status(404).send(data)
-		})
-
-
-	}, function done(err) {
-		if (err) {
-			console.error(err);
-			getErr().then(data => {
-				return res.status(404).send(data)
-			})
-		}
-	});
 })
 
 app.use(function (req, res, next) {

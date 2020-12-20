@@ -22,7 +22,7 @@
   ],
   "rewrites": [
     {
-      "source": "/:uid",
+      "source": "/(.*)",
       "destination": "/api"
     },
     {
