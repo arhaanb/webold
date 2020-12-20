@@ -10,16 +10,7 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/sahyog/app",
-      "destination": "https://sahyog-dash.herokuapp.com"
-    },
-    {
-      "source": "/sahyog/apk",
-      "destination": "https://sahyog.arhaanb.co/sahyog.apk"
-    }
-  ],
+  "redirects": [],
   "rewrites": [
     {
       "source": "/(.*)",
