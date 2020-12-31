@@ -28,5 +28,5 @@
   },
   "cleanUrls": true,
   "trailingSlash": false,
-  "public": true
+  "public": false
 }
