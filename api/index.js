@@ -51,16 +51,16 @@ app.get('/*', async (req, res) => {
         // console.log(records)
 
         if (records.length > 0) {
-          if (records[0].get('enabled') == 1) {
+          if (records[0].get('disabled') === true) {
+            getErr().then((data) => {
+              return res.status(404).send(data)
+            })
+          } else {
             var redirectUri = records[0].get('url')
             // return res.send(redirectUri)
             return res.status(302).redirect(redirectUri)
           }
         }
-
-        getErr().then((data) => {
-          return res.status(404).send(data)
-        })
       },
       function done(err) {
         if (err) {
@@ -72,6 +72,42 @@ app.get('/*', async (req, res) => {
       },
     )
 })
+
+// app.get('/*', async (req, res) => {
+//   const url = req.url.slice(1).toLowerCase()
+//   // console.log(url)
+//   base('Links')
+//     .select({
+//       maxRecords: 1,
+//       filterByFormula: `resolvedUid = "${url}"`,
+//       // filterByFormula: `resolvedUid = "${req.params.shrtn}"`
+//     })
+//     .eachPage(
+//       function page(records) {
+//         // console.log(records)
+
+//         if (records.length > 0) {
+//           if (records[0].get('enabled') == 1) {
+//             var redirectUri = records[0].get('url')
+//             // return res.send(redirectUri)
+//             return res.status(302).redirect(redirectUri)
+//           }
+//         }
+
+//         getErr().then((data) => {
+//           return res.status(404).send(data)
+//         })
+//       },
+//       function done(err) {
+//         if (err) {
+//           console.error(err)
+//           getErr().then((data) => {
+//             return res.status(404).send(data)
+//           })
+//         }
+//       },
+//     )
+// })
 
 app.use(function (req, res, next) {
   getErr().then((data) => {
