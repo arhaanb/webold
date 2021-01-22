@@ -18,7 +18,7 @@ function getErr() {
 
 const app = express()
 
-app.get('/gh/:repo', async (req, res) => {
+app.get('/gh/:repo', async (req, res, next) => {
   try {
     const repo = req.params.repo
     const { ok: yuh } = await fetch(
