@@ -1,0 +1,82 @@
+{
+  "timestamp": 1624536515101,
+  "context": null,
+  "progress_ms": 5163,
+  "item": {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5ypxebeHEIXjMtJb17uJlI"
+          },
+          "href": "https://api.spotify.com/v1/artists/5ypxebeHEIXjMtJb17uJlI",
+          "id": "5ypxebeHEIXjMtJb17uJlI",
+          "name": "Jet",
+          "type": "artist",
+          "uri": "spotify:artist:5ypxebeHEIXjMtJb17uJlI"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6NrLpQCPYrNS3kVWxDgIlg"
+      },
+      "href": "https://api.spotify.com/v1/albums/6NrLpQCPYrNS3kVWxDgIlg",
+      "id": "6NrLpQCPYrNS3kVWxDgIlg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d06bd6d3b1f258ba2bca597a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d06bd6d3b1f258ba2bca597a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d06bd6d3b1f258ba2bca597a",
+          "width": 64
+        }
+      ],
+      "name": "Get Born",
+      "release_date": "2003-09-15",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "type": "album",
+      "uri": "spotify:album:6NrLpQCPYrNS3kVWxDgIlg"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5ypxebeHEIXjMtJb17uJlI"
+        },
+        "href": "https://api.spotify.com/v1/artists/5ypxebeHEIXjMtJb17uJlI",
+        "id": "5ypxebeHEIXjMtJb17uJlI",
+        "name": "Jet",
+        "type": "artist",
+        "uri": "spotify:artist:5ypxebeHEIXjMtJb17uJlI"
+      }
+    ],
+    "available_markets": ["AD"],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/305WCRhhS10XUcH6AEwZk6"
+    },
+    "href": "https://api.spotify.com/v1/tracks/305WCRhhS10XUcH6AEwZk6",
+    "id": "305WCRhhS10XUcH6AEwZk6",
+    "is_local": false,
+    "name": "Are You Gonna Be My Girl",
+    "popularity": 76,
+    "preview_url": "https://p.scdn.co/mp3-preview/f0e6e6d1835303097ef22037f333f8c057463146?cid=e896c97a04894836806dc8c3529c8c36",
+    "track_number": 2,
+    "type": "track",
+    "uri": "spotify:track:305WCRhhS10XUcH6AEwZk6"
+  },
+  "currently_playing_type": "track",
+  "actions": {
+    "disallows": {
+      "resuming": true
+    }
+  },
+  "is_playing": true
+}

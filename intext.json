@@ -1,0 +1,53 @@
+{
+  "timestamp": 1624536649269,
+  "context": null,
+  "progress_ms": 7749,
+  "item": {
+    "album": {
+      "album_type": null,
+      "artists": [],
+      "available_markets": [],
+      "external_urls": {},
+      "href": null,
+      "id": null,
+      "images": [],
+      "name": "DRAFTS",
+      "release_date": null,
+      "release_date_precision": null,
+      "type": "album",
+      "uri": null
+    },
+    "artists": [
+      {
+        "external_urls": {},
+        "href": null,
+        "id": null,
+        "name": "BROCKHAMPTON",
+        "type": "artist",
+        "uri": null
+      }
+    ],
+    "available_markets": [],
+    "disc_number": 0,
+    "duration_ms": 144000,
+    "explicit": false,
+    "external_ids": {},
+    "external_urls": {},
+    "href": null,
+    "id": null,
+    "is_local": true,
+    "name": "INSECURITIES",
+    "popularity": 0,
+    "preview_url": null,
+    "track_number": 0,
+    "type": "track",
+    "uri": "spotify:local:BROCKHAMPTON:DRAFTS:INSECURITIES:144"
+  },
+  "currently_playing_type": "track",
+  "actions": {
+    "disallows": {
+      "resuming": true
+    }
+  },
+  "is_playing": true
+}
