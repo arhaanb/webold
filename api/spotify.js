@@ -20,14 +20,14 @@ export default async (_, res) => {
     songUrl = song.item.external_urls.spotify;
   }
 
-  return res.status(200).json({
-    album,
-    albumImageUrl,
-    artist,
-    isPlaying,
-    songUrl,
-    title,
-  });
+  // return res.status(200).json({
+  //   album,
+  //   albumImageUrl,
+  //   artist,
+  //   isPlaying,
+  //   songUrl,
+  //   title,
+  // });
 
-  // return res.send(song);
+  return res.send("disabled");
 };
