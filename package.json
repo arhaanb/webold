@@ -9,7 +9,7 @@
   "scripts": {},
   "dependencies": {
     "airtable": "^0.8.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase-admin": "^9.4.2",
     "isomorphic-unfetch": "^3.1.0",
     "querystring": "^0.2.0",
